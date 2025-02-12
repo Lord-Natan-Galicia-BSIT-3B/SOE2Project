@@ -1,41 +1,54 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="Home.css"><link>
-    </head>
-    <body>
-        <nav class="NavBar">
-            <div class="Logo">
-                <img src="dyci-logo.png"></img>
-            </div>
-            <div class="Menu">
-                <div class="drpchapters">
-                    <div class="dpchap">
-                        <div class="btnchap">
-                            <button class="dropbtn">Chapters</button>
-                        </div>
-                        <div class="contchapters">
-                            <button><strong>Chapter 1: </strong> Admission and Enrollment</button>
-                            <button><strong>Chapter 2: </strong>Academic Policies</button>
-                            <button><strong>Chapter 3: </strong>Scholarships, Discounts and Other Financial Grants</button>
-                            <button><strong>Chapter 4: </strong>Student Services and Campus Life</button>
-                            <button><strong>Chapter 5: </strong>Student Discipline and Behavior</button>
-                        </div>
-                    </div> 
-
-                    <div class="dpdash">
-                        <div class="btndash">
-                            <button class="dropbtn">Dashbard</button>
-                        </div>
-                        <div class="contdash">
-                            <button>To Do List</button>
-                            <button>Journal</button>
-                        </div>
-                    </div> 
-                    
-                </div>
-            </div>
-        </nav>
-        <div class="TBD">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Roadmap</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="dyci-logo.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="NavBar">
+        <div class="Logo">
+            <img src="dyci-logo.png" alt="DYCI Logo">
         </div>
-    </body>
+        <div class="Menu">
+            <div class="drpchapters">
+                <div class="dpdash">
+                    <div class="btndash">
+                        <button class="dropbtn" onclick="togglePopupHome()">Home</button>
+                    </div>
+                    <div class="contHome" id="popupHome">
+                        <button>To Do List</button>
+                        <button>Journal</button>
+                    </div>
+                </div> 
+                <div class="dpchap">
+                    <div class="btnchap">
+                        <button class="dropbtn" onclick="togglePopup()">Chapters</button>
+                    </div>
+                    <div class="contchapters" id="popup">
+                        <button><strong>Chapter 1: </strong> Admission and Enrollment</button>
+                        <button><strong>Chapter 2: </strong>Academic Policies</button>
+                        <button><strong>Chapter 3: </strong>Scholarships, Discounts and Other Financial Grants</button>
+                        <button><strong>Chapter 4: </strong>Student Services and Campus Life</button>
+                        <button><strong>Chapter 5: </strong>Student Discipline and Behavior</button>
+                    </div>
+                </div> 
+
+                
+            </div>
+        </div>
+    </nav>
+    <div class="TBD"></div>
+
+    <script>
+        function togglePopup() {
+            document.getElementById("popup").classList.toggle("show");
+        }
+        function togglePopupHome() {
+            document.getElementById("popupHome").classList.toggle("show");
+        }
+    </script>
+</body>
 </html>
